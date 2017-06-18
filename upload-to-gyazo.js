@@ -13,7 +13,6 @@ client.upload(file, {
   collection_id: collection_id,
 })
 .then(function(res){
-  console.log(res.data.image_id);
   console.log(res.data.permalink_url);
 })
 .catch(function(err){
