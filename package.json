@@ -7,6 +7,7 @@
   "dependencies": {
     "chrome-remote-interface": "^0.23.2",
     "delay": "^2.0.0",
+    "gyazo-api": "^0.3.1",
     "minimist": "^1.2.0",
     "mz": "^2.6.0"
   }

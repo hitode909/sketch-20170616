@@ -10,5 +10,6 @@ for url in "$@"
 do
   echo "$url"
   output=$(node url-to-filename.js "$url")
-  node index.js --full --delay 5000 --url "$url" --output "$output"
+  node index.js --full --delay 1000 --url "$url" --output "$output"
+  node upload-to-gyazo.js "$output" "$url" "$gyazo_access_token" "$gyazo_collection_id"
 done
