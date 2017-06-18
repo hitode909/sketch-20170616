@@ -69,6 +69,7 @@ async function init() {
 
     await timeout(delay);
     const screenshot = await Page.captureScreenshot({format});
+    console.log(`screenshot length: ${screenshot.data.length}`);
     const buffer = new Buffer(screenshot.data, 'base64');
     await file.writeFile(output, buffer, 'base64');
     console.log('Screenshot saved');
