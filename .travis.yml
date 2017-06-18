@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+- docker build -t sketch0616 .
+
+script:
+- docker run --cap-add=SYS_ADMIN --volume "$PWD":/app --env gyazo_access_token="$GYAZO_ACCESS_TOKEN" --env gyazo_collection_id="$GYAZO_COLLECTION_ID" sketch0616 http://hatenablog.com/
